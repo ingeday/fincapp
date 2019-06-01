@@ -5,3 +5,5 @@
 <li><a href='{{ backpack_url('animal') }}'><i class='fa fa-dot-circle-o'></i> <span>Animales</span></a></li>
 <li><a href='{{ backpack_url('class') }}'><i class='fa fa-plus-square'></i> <span>Clases</span></a></li>
 <li><a href='{{ backpack_url('client') }}'><i class='fa fa-users'></i> <span>Clientes</span></a></li>
+<li><a href='{{ backpack_url('provider') }}'><i class='fa fa-truck'></i> <span>Proveedores</span></a></li>
+<li><a href='{{ backpack_url('sale') }}'><i class='fa fa-truck'></i> <span>Ventas</span></a></li>

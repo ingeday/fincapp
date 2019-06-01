@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
-class Client extends Model
+class Provider extends Model
 {
     use CrudTrait;
 
@@ -14,9 +14,8 @@ class Client extends Model
     | GLOBAL VARIABLES
     |--------------------------------------------------------------------------
     */
-    
 
-    protected $table = 'clients';
+    protected $table = 'providers';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];
@@ -35,15 +34,6 @@ class Client extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-
-    //public function classs() {
-      //  return $this->hasMany(AnimalClass::class,'class');
-    //}
-
-    public function sales()
-    {
-        return $this->hasMany(Sales::class, "client_id","id");
-    }
 
     /*
     |--------------------------------------------------------------------------
