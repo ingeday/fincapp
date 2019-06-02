@@ -15,8 +15,8 @@ return [
     'project_name' => 'Backpack',
 
     // Menu logos
-    'logo_lg'   => '<b>Back</b>pack',
-    'logo_mini' => '<b>B</b>p',
+    'logo_lg'   => '<b>Finca</b> La Turquesa',
+    'logo_mini' => '<b>F</b>t',
 
     // Developer or company name. Shown in footer.
     'developer_name' => 'Cristian Tabacitu',

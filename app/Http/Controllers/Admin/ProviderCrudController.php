@@ -27,6 +27,20 @@ class ProviderCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/provider');
         $this->crud->setEntityNameStrings('provider', 'providers');
 
+        $this->crud->addField([   // Enum
+            'name' => 'typeofdocument',
+            'label' => 'Tipo Documento',
+            'type' => 'enum'
+        ]);
+
+        $this->crud->addField([   // Enum
+            'name' => 'idnumber',
+            'label' => 'No. Documento',
+            'type' => 'Text'
+        ]);
+
+        
+
         /*
         |--------------------------------------------------------------------------
         | CrudPanel Configuration

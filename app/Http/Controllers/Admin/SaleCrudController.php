@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Models\Animal;
+use Carbon\Carbon; 
 
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\SaleRequest as StoreRequest;
@@ -66,6 +67,18 @@ class SaleCrudController extends CrudController
             'model' => "App\Models\Client", // foreign key model
           ]);
 
+          $this->crud->addField([
+            'name'  => 'user_id', 
+            'type'  => 'hidden', 
+            'value' => '',
+        ]);
+
+        $this->crud->addField([
+            'name'  => 'time', 
+            'type'  => 'hidden', 
+            'value' => '',
+        ]);
+
 
           $this->crud->addField([
             'label' => "Animal",
@@ -79,7 +92,8 @@ class SaleCrudController extends CrudController
             })
           ]);
 
-          $this->crud->removeAllButtons();
+         // $this->crud->removeAllButtons();
+          $this->crud->allowAccess('show');
 
           
         /*
@@ -98,11 +112,19 @@ class SaleCrudController extends CrudController
 
     public function store(StoreRequest $request)
     {
+
+        
         // your additional operations before save here
         // get animal id
         $animalId=$request->animal_id;
         // update the sale state
         Animal::find($animalId)->setSold();
+
+        // Add user_id to the transaction
+        $request->merge(['user_id' => backpack_user()->id]);
+        // Update the time
+        $time=Carbon::now()->format('Y-m-d');
+        $request->merge(['time' => $time]);
         
         
         

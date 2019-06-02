@@ -19,7 +19,7 @@ class Provider extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ["name","address","email","phone"];
+    protected $fillable = ["typeofdocument","idnumber","name","address","email","phone"];
     // protected $hidden = [];
     // protected $dates = [];
 

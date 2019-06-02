@@ -41,7 +41,7 @@ class AnimalCrudController extends CrudController
 
         $this->crud->addColumn([
             'name' => 'class', // Nombre de la columna en tabla local (animal)
-            'label' => "Clase Animal", // titulo del campo en la tabla
+            'label' => "Clase", // titulo del campo en la tabla
             'type' => 'select', // Tipo de columna.  select
             'entity'    => 'classs', // Método que define la relación 
             'attribute' => "name", // Campo de la tabla foránea (classes) que se mostrará

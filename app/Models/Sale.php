@@ -19,7 +19,7 @@ class Sale extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ["total","client_id","animal_id","time"];
+    protected $fillable = ["total","client_id","animal_id","time","user_id"];
     // protected $hidden = [];
     // protected $dates = [];
 
